@@ -1,0 +1,33 @@
+<!-- 2. Write a JavaScript program to change the  color given text in p tag  
+Eg : if you select green then the color of text should be green  -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Text Color</title>
+</head>
+<body>
+
+<select id="colorSelect">
+    <option value="Red">Red</option>
+    <option value="Green">Green</option>
+    <option value="White">White</option>
+    <option value="Black">Black</option>
+</select>
+
+<button onclick="changeTextColor()">Change Color</button>
+
+<p id="text">Sample text...</p>
+
+<script>
+function changeTextColor() {
+    const selectElement = document.getElementById('colorSelect');
+    const selectedColor = selectElement.value;
+    const textElement = document.getElementById('text');
+    textElement.style.color = selectedColor;
+}
+</script>
+
+</body>
+</html>
